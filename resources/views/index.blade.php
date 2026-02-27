@@ -12,26 +12,27 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="contenedor">
-            <div class="barra">
-                <a href="/">
-                    <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo">
-                </a>
+    <header class="header inicio">
+        <div class="contenedor contenido-header">
 
-                <div class="mobile-menu">
-                    <img alt="icono menu responsive">
-                </div>
-                
-                <div class="derecha">
+            <div class="barra">
+                <div class="barra-inner">
+                    <a href="/">
+                    <img src="{{ asset('img/PNGLOGO.png') }}" alt="Logo" class="logo">
+                    </a>
+
                     <nav class="navegacion">
+                    <a href="#">Nosotros</a>
+                    <a href="#">Anuncios</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contacto</a>
                     </nav>
                 </div>
-            </div> 
-            <h1>Software, sistemas a medida y soporte IT profesional.</h1>
+            </div>
+
+            <h1 class="hero-title">Software, sistemas a medida y soporte IT profesional.</h1>
         </div>
     </header>
-
     <div id="react-root">
         HOLA MUNDOSAMDKSA
     </div>
