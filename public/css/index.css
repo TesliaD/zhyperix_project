@@ -303,12 +303,20 @@ body {
 
 
 /* ===== SECCION INFERIOR ===== */
+/* ===== SECCION INFERIOR ===== */
 
 .seccion-inferior{
-  padding: 4rem 0;
-  display: flex;              
-  justify-content: center;    /* horizontal */
-  align-items: center;        /* vertical */
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  display: grid;
+  gap: 3rem;
+}
+
+/* desktop */
+@media (min-width: 992px){
+  .seccion-inferior{
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
 }
 
 /* ===== PORQUE ZYPHERIX ===== */
@@ -427,22 +435,34 @@ body {
 /* ===== TESTIMONIALES ===== */
 
 .testimoniales{
-  padding: 4rem 0;
-  background: #020617;
-  color: white;
+  background: rgba(255,255,255,0.04);
+  padding: 2rem;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  height: fit-content;
+}
+
+.testimoniales h3{
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial{
-  max-width: 720px;
-  margin: 2rem auto 0 auto;
-  background: rgba(255,255,255,0.05);
-  padding: 2rem;
-  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  padding: 1.5rem;
+  border-radius: 14px;
 }
 
 .testimonial blockquote{
   font-style: italic;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 992px){
+  .testimoniales{
+    position: sticky;
+    top: 100px;
+  }
 }
 
 /* ===== FOOTER PRO ===== */

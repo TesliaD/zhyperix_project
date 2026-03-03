@@ -181,22 +181,18 @@
                 </div> 
         </section>
 
-        </div>
-
-        
-         <section class="testimoniales">
-        <div class="contenedor">
+        <!-- DERECHA -->
+        <aside class="testimoniales">
             <h3>Testimoniales</h3>
+
             <div class="testimonial">
                 <blockquote>
-                        El personal se comportó de una excelente forma, muy buena atención y la casa que me 
-                        ofrecieron cumple con todas mis expectativas.
+                    El personal se comportó de una excelente forma...
                 </blockquote>
                 <p>Ian Felix</p>
             </div>
-
-        </div>
-      </section>
+        </aside>
+    </div>
       
         <section class="cta">
             <div class="contenedor">
