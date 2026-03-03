@@ -8,6 +8,7 @@
 body {
   margin: 0;          
   font-family: system-ui, -apple-system, sans-serif;
+  background-color: #011C40;
 }
 
 /* CONTENEDOR GENERAL */
@@ -35,12 +36,14 @@ body {
   justify-content: flex-start; 
 }
 
+
 /* CONTENIDO HEADER */
 .contenido-header {
   width: 100%;
   padding-top: 1rem;
   padding-inline: clamp(1rem, 4vw, 3rem); 
 }
+
 /* BARRA SUPERIOR */
 /* ===== NAVBAR STICKY PRO ===== */
 .barra {
@@ -107,7 +110,7 @@ body {
   line-height: 1.2;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   max-width: 650px;
-  margin-top: 10rem;
+  margin-top: 25rem;
 }
 /*Iconos*/
 .icono i {
@@ -116,56 +119,96 @@ body {
 }
 
 /* ===== SERVICIOS ===== */
-/* GRID */
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+/*Nuestros Servicios*/
+
+.nuestros-servicios{
+  font-size: 3rem;
+  text-align: center;
+  color: whitesmoke;
 }
 
-/* CARD */
+.servicios{
+  padding: 2rem 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.02)
+  );
+}
+
+/* ===== SWIPER CONTENEDOR ===== */
+.serviciosSwiper {
+  padding: 2rem 0 4rem;
+}
+
+/* ===== SLIDE ===== */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD GRANDE ===== */
 .servicio-card {
+  width: 100%;
+  min-height: 380px; 
   background: #fff;
-  border-radius: 18px;
-  overflow: hidden; /* 🔥 CLAVE */
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  padding-bottom: 1.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,.10);
+  padding-bottom: 1.8rem;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.servicio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,0,0,.12);
-}
-
-/* CONTENEDOR DE IMAGEN */
 .servicio-img {
   width: 100%;
-  height: 160px; /* 👈 controla altura de la tarjeta */
+  height: 240px;
   overflow: hidden;
 }
 
-/* IMAGEN */
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 55px rgba(0,0,0,.16);
+}
+
+
 .servicio-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 🔥 ESTO ARREGLA TODO */
-  display: block;
+  object-fit: cover;
 }
 
-/* CONTENIDO */
+/* ===== CONTENIDO ===== */
 .servicio-card h3,
 .servicio-card p,
 .servicio-card .icono {
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 /* ICONO */
 .icono {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 2rem;   
   margin-top: 1rem;
+}
+
+/* FLECHAS */
+
+/*boton-solicitar*/
+.boton-solicitar {
+  display: inline-block;
+  background: #38bdf8;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.boton-solicitar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
 /* ===== MENU MOBILE ===== */
@@ -244,31 +287,185 @@ body {
   transition: transform .2s ease;
 }
 
+/*ICONO Whatsapp*/
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-/*CTA*/
-.cta{
-  text-align: center;
-  justify-content: center;
+
+/*Blog Inferior*/
+@media (min-width: 768px){
+  .seccion-inferior{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+  }
 }
 
-/*Testimoniales*/
-.testimoniales{
-  text-align: center;
-  justify-content: center;
-}
-/* ===== PORQUE ===== */
 
-.porque {
-  padding: 5rem 0;
-  background: #f8fafc;
-  text-align: center;
+/* ===== SECCION INFERIOR ===== */
+
+.seccion-inferior{
+  padding: 4rem 0;
+  display: flex;              
+  justify-content: center;    /* horizontal */
+  align-items: center;        /* vertical */
 }
 
-.porque-grid {
+/* ===== PORQUE ZYPHERIX ===== */
+
+.blog {
+  padding: 3rem 0;
+  text-align: center;
+  color: white;
+}
+
+.blog h2{
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+
+.porque-grid{
   margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
+}
+/* tarjetas del porque */
+.porque-card{
+  margin-top: 1rem;
+  background: rgba(255,255,255,0.06);
+  padding: 1.6rem;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.porque-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+}
+
+.porque-grid h4{
+  margin-bottom: .5rem;
+  color: #38bdf8;
+}
+
+.porque-texto{
+  text-align: left;
+}
+/* ===== BASE (móvil) ===== */
+
+.porque-con-img{
+  display: block;
+  text-align: center;
+}
+
+.porque-img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.porque-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== DESKTOP ===== */
+
+@media (min-width: 992px){
+
+  .porque-con-img{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 1.2rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .porque-con-img .porque-img{
+    grid-column: 2; /* 👈 más confiable que order */
+    margin-bottom: 0;
+    height: 160px;
+  }
+
+}
+
+/* ===== CTA ===== */
+
+.cta{
+  padding: 4rem 0;
+  background: linear-gradient(135deg,#0ea5e9,#38bdf8);
+  text-align: center;
+  color: white;
+}
+
+.cta h2{
+  margin-bottom: 1.5rem;
+}
+
+.btn-principal{
+  display: inline-block;
+  background: #fff;
+  color: #0f172a;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.btn-principal:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ===== TESTIMONIALES ===== */
+
+.testimoniales{
+  padding: 4rem 0;
+  background: #020617;
+  color: white;
+}
+
+.testimonial{
+  max-width: 720px;
+  margin: 2rem auto 0 auto;
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.testimonial blockquote{
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER PRO ===== */
+
+.footer-area{
+  background: #020617;
+  color: rgba(255,255,255,.8);
+  padding: 3rem 0 1rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-area a{
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer-area a:hover{
+  text-decoration: underline;
+}
+
+.copyright{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,.5);
 }
