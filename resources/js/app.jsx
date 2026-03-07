@@ -79,4 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    //Carrusel Automatico de testimoniales
+    document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".testimonial-card");
+        let index = 0;
+
+        setInterval(() => {
+            cards[index].classList.remove("active");
+            index = (index + 1) % cards.length;
+            cards[index].classList.add("active");
+        }, 4000);
+    });
+
 });
