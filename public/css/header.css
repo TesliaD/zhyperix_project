@@ -1,0 +1,157 @@
+/* HEADER HERO */
+.header.inicio {
+  background-image: linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.35)
+    ),
+    url("/img/header1.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 75vh;
+
+  display: flex;
+  flex-direction: column;   
+  justify-content: flex-start; 
+}
+
+
+/* CONTENIDO HEADER */
+.contenido-header {
+  width: 100%;
+  padding-top: 1rem;
+  padding-inline: clamp(1rem, 4vw, 3rem); 
+}
+
+/* BARRA SUPERIOR */
+
+/* ===== NAVBAR STICKY PRO ===== */
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  padding: .9rem 0;
+}
+/* LOGO */
+.logo {
+  width: clamp(140px, 16vw, 190px);
+  height: auto;
+  display: block;
+}
+
+/* NAVEGACIÓN */
+.navegacion {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.navegacion a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: .3px;
+  transition: all .25s ease;
+  position: relative;
+}
+
+/* hover moderno */
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width .25s ease;
+}
+
+.navegacion a:hover::after {
+  width: 100%;
+}
+
+.barra-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* HERO TITLE PRO */
+.hero-title {
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  max-width: 650px;
+  margin-top: 25rem;
+}
+/*Iconos*/
+.icono i {
+  font-size: 2.2rem;
+  color: #38bdf8;
+}
+
+/* ===== MENU MOBILE ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navegacion {
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    background: rgba(15,23,42,.95);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 12px;
+    gap: 1rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all .25s ease;
+  }
+
+  .navegacion.activo {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

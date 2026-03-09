@@ -1,0 +1,25 @@
+/*Whatsapp notificacion**/
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  z-index: 999;
+  transition: transform .2s ease;
+}
+
+/*ICONO Whatsapp*/
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}

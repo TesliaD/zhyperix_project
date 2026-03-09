@@ -16,6 +16,29 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Zhyperix</title>
 </head>
+<script>
+const swiper = new Swiper(".serviciosSwiper", {
+    loop: true,
+    spaceBetween: 30,
+
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+});
+</script>
 <body>
     <a href="https://wa.me/526331325768" class="whatsapp-float" target="_blank"><i class="bi bi-whatsapp"></i></a>
     <header class="header inicio">
@@ -25,7 +48,7 @@
                 <div class="barra-inner">
 
                     <a href="/">
-                    <img src="{{ asset('img/pnglogoclaro.png') }}" alt="Logo" class="logo">
+                        <img src="{{ asset('img/pnglogoclaro.png') }}" alt="Logo" class="logo">
                     </a>
 
                     <!-- BOTON HAMBURGUESA -->
@@ -34,10 +57,10 @@
                     </button>
 
                     <nav class="navegacion" id="navMenu">
-                    <a href="#">Nosotros</a>
-                    <a href="#">Anuncios</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contacto</a>
+                        <a href="/sobrenosotros">Nosotros</a>
+                        <a href="#">Anuncios</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contacto</a>
                     </nav>
 
                 </div>
