@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -20,75 +21,102 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================
-    // 🔹 REVEAL ANIMATION
+    // REVEAL ANIMATION
     // =========================
     const reveals = document.querySelectorAll(
-        '.servicio-card, .cta, .testimoniales'
+        '.servicio-card, .cta, .testimoniales-pro, .quehacemos-card'
     );
 
     if (reveals.length > 0) {
+
         const observer = new IntersectionObserver(entries => {
+
             entries.forEach(entry => {
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
+
             });
+
         }, { threshold: 0.15 });
 
         reveals.forEach(el => {
             el.classList.add('reveal');
             observer.observe(el);
         });
+
     }
 
     // =========================
-    // 🔹 SWIPER
+    // SWIPER SERVICIOS
     // =========================
     const swiperEl = document.querySelector('.serviciosSwiper');
 
     if (swiperEl) {
+
         new Swiper('.serviciosSwiper', {
+
             modules: [Navigation, Pagination, Autoplay],
+
             slidesPerView: 1,
             spaceBetween: 25,
             loop: true,
 
             autoplay: {
                 delay: 3500,
-                disableOnInteraction: false,
+                disableOnInteraction: false
             },
 
             pagination: {
                 el: '.swiper-pagination',
-                clickable: true,
+                clickable: true
             },
 
             navigation: {
                 nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                prevEl: '.swiper-button-prev'
             },
 
             breakpoints: {
-                768: {
-                    slidesPerView: 2,
+
+                640: {
+                    slidesPerView: 1
                 },
+
+                768: {
+                    slidesPerView: 2
+                },
+
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 3
                 }
+
             }
+
         });
+
     }
 
-    //Carrusel Automatico de testimoniales
-    document.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll(".testimonial-card");
+    // =========================
+    // CARRUSEL TESTIMONIALES
+    // =========================
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    if (testimonialCards.length > 0) {
+
         let index = 0;
 
         setInterval(() => {
-            cards[index].classList.remove("active");
-            index = (index + 1) % cards.length;
-            cards[index].classList.add("active");
+
+            testimonialCards[index].classList.remove('active');
+
+            index = (index + 1) % testimonialCards.length;
+
+            testimonialCards[index].classList.add('active');
+
         }, 4000);
-    });
+
+    }
 
 });

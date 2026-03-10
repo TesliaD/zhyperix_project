@@ -17,6 +17,14 @@ body {
   margin: 0 auto;
 }
 
+.quehacemos-seccion{
+  padding: 4rem 0;
+  width: 100%;
+  background:
+    radial-gradient(circle at 50% -20%, #0f172a 0%, transparent 55%),
+    #020617;
+}
+
 .quehacemos-text{
   text-align: center;
 }
@@ -24,6 +32,13 @@ body {
 .serviciosSwiper {
   padding: 2rem 0 4rem;
 }
+
+.sobrenosotros-text{
+  font-size: 3rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
 
 /* ===== SLIDE ===== */
 .swiper-slide {
@@ -33,23 +48,31 @@ body {
 
 
         /* ===== CARD GRANDE ===== */
-.quehacemos-card {
-  width: 100%;
-  min-height: 380px;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0,0,0,.10);
-  padding: 1.8rem;
+/* CARD */
+.quehacemos-card{
+width:100%;
+min-height:320px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+padding:1.4rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+transition:.3s;
+}
+
+.quehacemos-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(0,0,0,.18);
 }
 
 .quehacemos-img {
   width: 100%;
-  height: 240px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -59,11 +82,6 @@ body {
   text-align: center;
 }
 
-.quehacemos-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 22px 55px rgba(0,0,0,.16);
-}
-
 .quehacemos-img img {
   width: 100%;
   height: 100%;
@@ -71,12 +89,24 @@ body {
 }
 
 /* ===== CONTENIDO ===== */
-.quehacemos-img h3,
-.quehacemos-img p,
-.quehacemos-img .icono {
-  text-align: center;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
+.quehacemos-card h3{
+font-size:1.2rem;
+margin:.5rem 0;
+text-align:center;
+}
+
+.quehacemos-card p{
+font-size:.9rem;
+color:#555;
+text-align:center;
+line-height:1.5;
+}
+
+.icono{
+font-size:28px;
+text-align:center;
+display:block;
+margin-top:8px;
 }
 
 /* FLECHAS */
@@ -106,7 +136,9 @@ align-items:center;
 }
 
 .sobre-img img{
-width:100%;
+align-items: center;
+margin: 3rem;
+width:80%;
 border-radius:15px;
 }
 
@@ -114,4 +146,166 @@ border-radius:15px;
 .sobre-grid{
 grid-template-columns:1fr;
 }
+}
+
+/* ===== CTA ===== */
+
+.cta{
+  background-image: linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.35)
+    ),
+    url("/img/contactanos.jpg");
+
+  background-size: cover;          /* que cubra todo */
+  background-position: center;     /* centrada */
+  background-repeat: no-repeat;    /* sin repetirse */
+  background-attachment: fixed;    /* efecto parallax opcional */
+
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+.cta h2{
+  margin-bottom: 1.5rem;
+}
+
+.btn-principal{
+  display: inline-block;
+  background: #fff;
+  color: #0f172a;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.btn-principal:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* SECCION VALORES */
+
+.valores-seccion{
+padding:80px 0;
+background:#f8fafc;
+}
+
+.valores-titulo{
+text-align:center;
+font-size:2rem;
+margin-bottom:50px;
+}
+
+.valores-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.valor-card{
+
+background:#fff;
+padding:30px;
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.valor-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.valor-icono{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+.valor-icono-white{
+  color: white;
+  font-size:2.5rem;
+  margin-bottom:15px;
+}
+
+.valor-card h3{
+margin-bottom:10px;
+}
+
+.valor-card p{
+font-size:.95rem;
+color:#555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.valores-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.valores-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* ESTADISTICAS */
+
+.estadisticas-seccion{
+padding:70px 0;
+background:#011C40;
+color:white;
+}
+
+.estadisticas-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+text-align:center;
+}
+
+.stat-card{
+padding:30px;
+}
+
+.stat-numero{
+font-size:2.8rem;
+font-weight:700;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:1rem;
+opacity:.9;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.estadisticas-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.estadisticas-grid{
+grid-template-columns:1fr;
+}
+
 }

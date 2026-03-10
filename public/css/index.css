@@ -5,10 +5,18 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;          
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #011C40;
+body{
+
+background:
+
+radial-gradient(circle at 20% 10%, rgba(56,189,248,0.12), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(99,102,241,0.10), transparent 45%),
+radial-gradient(circle at 50% 90%, rgba(56,189,248,0.08), transparent 40%),
+
+#020617;
+
+color:white;
+
 }
 
 /* CONTENEDOR GENERAL */
@@ -123,17 +131,24 @@ body {
 /*Nuestros Servicios*/
 
 .nuestros-servicios{
-  font-size: 3rem;
-  text-align: center;
-  color: whitesmoke;
+
+font-size:2.3rem;
+
+text-align:center;
+
+margin-bottom:3rem;
+
+background:linear-gradient(90deg,#38bdf8,#6366f1);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
 }
 
 .servicios{
-  padding: 4rem 0;
-  width: 100%;
-  background:
-    radial-gradient(circle at 50% -20%, #0f172a 0%, transparent 55%),
-    #020617;
+padding:4rem 0;
+width:100%;
 }
 
 /* ===== SWIPER CONTENEDOR ===== */
@@ -148,15 +163,23 @@ body {
 }
 
 /* ===== CARD GRANDE ===== */
-.servicio-card {
-  width: 100%;
-  min-height: 380px; 
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0,0,0,.10);
-  padding-bottom: 1.8rem;
-  transition: transform .25s ease, box-shadow .25s ease;
+.servicio-card{
+
+background:rgba(15,23,42,.7);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:18px;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.4);
+
+transition:.35s;
+
+padding:1.8rem;
+
 }
 
 .servicio-img {
@@ -165,9 +188,15 @@ body {
   overflow: hidden;
 }
 
-.servicio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 55px rgba(0,0,0,.16);
+.servicio-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(56,189,248,.5);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.6);
+
 }
 
 
@@ -414,6 +443,7 @@ body {
 /* ===== TESTIMONIALES===== */
 
 .testimoniales-pro{
+  color: #fff;
   padding: 4rem 0;
   text-align: center;
 }
