@@ -6,17 +6,15 @@
 }
 
 body{
+font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
 background:
-
 radial-gradient(circle at 20% 10%, rgba(56,189,248,0.12), transparent 40%),
 radial-gradient(circle at 80% 30%, rgba(99,102,241,0.10), transparent 45%),
 radial-gradient(circle at 50% 90%, rgba(56,189,248,0.08), transparent 40%),
-
 #020617;
 
 color:white;
-
 }
 
 /* CONTENEDOR GENERAL */
@@ -140,7 +138,7 @@ margin-bottom:3rem;
 
 background:linear-gradient(90deg,#38bdf8,#6366f1);
 
-color:transparent;
+color:white;
 
 }
 
@@ -839,3 +837,4 @@ box-shadow:
     margin: 0 auto;
   }
 }
+

@@ -1,249 +1,239 @@
-/* RESET */
+/* ===============================
+RESET
+===============================*/
+
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
+*::after{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-body {
-  margin: 0;          
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #011C40;
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+background:#020617;
+color:white;
+line-height:1.6;
 }
 
-/* CONTENEDOR GENERAL */
-.contenedor {
-  width: min(94%, 1200px); 
-  margin: 0 auto;
+/* ===============================
+CONTENEDOR
+===============================*/
+
+.contenedor{
+width:min(92%,1200px);
+margin:auto;
 }
 
-.quehacemos-seccion{
-  padding: 4rem 0;
-  width: 100%;
-  background:
-    radial-gradient(circle at 50% -20%, #0f172a 0%, transparent 55%),
-    #020617;
+/* ===============================
+SECCIONES
+===============================*/
+
+.seccion{
+padding:90px 0;
 }
 
-.quehacemos-text{
-  text-align: center;
-}
+/* ===============================
+TITULOS
+===============================*/
 
-.serviciosSwiper {
-  padding: 2rem 0 4rem;
-}
-
-.sobrenosotros-text{
-  font-size: 3rem;
-  text-align: center;
-  color: whitesmoke;
-}
-
-
-/* ===== SLIDE ===== */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-
-        /* ===== CARD GRANDE ===== */
-/* CARD */
-.quehacemos-card{
-width:100%;
-min-height:320px;
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.12);
-padding:1.4rem;
-
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-
-transition:.3s;
-}
-
-.quehacemos-card:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,.18);
-}
-
-.quehacemos-img {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.boton-solicitar{
-  display: block;
-  margin: 1rem auto 0;
-  text-align: center;
-}
-
-.quehacemos-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===== CONTENIDO ===== */
-.quehacemos-card h3{
-font-size:1.2rem;
-margin:.5rem 0;
+.titulo-seccion{
 text-align:center;
+font-size:2.4rem;
+margin-bottom:60px;
+font-weight:700;
 }
 
-.quehacemos-card p{
-font-size:.9rem;
-color:#555;
-text-align:center;
-line-height:1.5;
-}
 
-.icono{
-font-size:28px;
-text-align:center;
-display:block;
-margin-top:8px;
-}
+/* ===============================
+SOBRE NOSOTROS
+===============================*/
 
-/* FLECHAS */
-
-/*boton-solicitar*/
-.boton-solicitar {
-  display: inline-block;
-  background: #38bdf8;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: .25s;
-}
-
-.boton-solicitar:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+.sobre-seccion{
+background:#020617;
 }
 
 .sobre-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap: 100px;
 align-items:center;
 }
 
+.sobre-text h2{
+font-size:2.2rem;
+margin-bottom:15px;
+}
+
+.sobre-text p{
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
 .sobre-img img{
-align-items: center;
-margin: 3rem;
-width:80%;
-border-radius:15px;
+width:100%;
+border-radius:16px;
+box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
 
 @media(max-width:768px){
+
 .sobre-grid{
 grid-template-columns:1fr;
 }
+
 }
 
-/* ===== CTA ===== */
+/* ===============================
+SERVICIOS
+===============================*/
 
-.cta{
-  background-image: linear-gradient(
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.35)
-    ),
-    url("/img/contactanos.jpg");
-
-  background-size: cover;          /* que cubra todo */
-  background-position: center;     /* centrada */
-  background-repeat: no-repeat;    /* sin repetirse */
-  background-attachment: fixed;    /* efecto parallax opcional */
-
-  padding: 4rem 0;
-  text-align: center;
-  color: white;
-}
-.cta h2{
-  margin-bottom: 1.5rem;
+.servicios-seccion{
+background:#020617;
 }
 
-.btn-principal{
-  display: inline-block;
-  background: #fff;
-  color: #0f172a;
-  padding: 12px 28px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all .25s ease;
+.quehacemos-card{
+
+width:100%;
+min-height:380px;
+
+background:#0f172a;
+
+border-radius:18px;
+padding:1.8rem;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+transition:.35s;
 }
 
-.btn-principal:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+.quehacemos-card:hover{
+
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 30px 60px rgba(0,0,0,.4);
+
 }
 
-/* SECCION VALORES */
+.quehacemos-img{
+
+height:200px;
+border-radius:12px;
+overflow:hidden;
+margin-bottom:15px;
+
+}
+
+.quehacemos-img img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.quehacemos-card h3{
+
+text-align:center;
+font-size:1.2rem;
+margin-bottom:10px;
+
+}
+
+.quehacemos-card p{
+
+text-align:center;
+font-size:.9rem;
+color:#cbd5f5;
+
+}
+
+.boton-solicitar{
+
+display:block;
+text-align:center;
+margin-top:15px;
+
+background:#38bdf8;
+color:white;
+
+padding:12px;
+border-radius:8px;
+
+text-decoration:none;
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.boton-solicitar:hover{
+
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+/* ===============================
+VALORES
+===============================*/
 
 .valores-seccion{
-padding:80px 0;
-background:#f8fafc;
-}
 
-.valores-titulo{
-text-align:center;
-font-size:2rem;
-margin-bottom:50px;
+background:#C4DDF2;
+color:#0f172a;
+
 }
 
 .valores-grid{
+
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:30px;
+
 }
 
 .valor-card{
 
-background:#fff;
-padding:30px;
-border-radius:15px;
+background:white;
+
+padding:35px;
+
+border-radius:16px;
 
 text-align:center;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 15px 35px rgba(0,0,0,.1);
 
 transition:.3s;
 
 }
 
 .valor-card:hover{
+
 transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+
 }
 
 .valor-icono{
+
 font-size:2.5rem;
 margin-bottom:15px;
-}
-.valor-icono-white{
-  color: white;
-  font-size:2.5rem;
-  margin-bottom:15px;
-}
+color:#38bdf8;
 
-.valor-card h3{
-margin-bottom:10px;
 }
 
 .valor-card p{
-font-size:.95rem;
-color:#555;
-}
 
-/* RESPONSIVE */
+font-size:.95rem;
+color:#475569;
+
+}
 
 @media(max-width:900px){
 
@@ -261,38 +251,50 @@ grid-template-columns:1fr;
 
 }
 
-/* ESTADISTICAS */
+/* ===============================
+ESTADISTICAS
+===============================*/
 
 .estadisticas-seccion{
-padding:70px 0;
+
 background:#011C40;
-color:white;
+
 }
 
 .estadisticas-grid{
+
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:30px;
 text-align:center;
+
 }
 
 .stat-card{
-padding:30px;
+
+background:#0f172a;
+
+padding:35px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.08);
+
 }
 
 .stat-numero{
-font-size:2.8rem;
+
+font-size:2.6rem;
 font-weight:700;
 color:#38bdf8;
-margin-bottom:10px;
+
 }
 
 .stat-card p{
-font-size:1rem;
-opacity:.9;
-}
 
-/* RESPONSIVE */
+color:#cbd5f5;
+
+}
 
 @media(max-width:900px){
 
@@ -307,5 +309,65 @@ grid-template-columns:repeat(2,1fr);
 .estadisticas-grid{
 grid-template-columns:1fr;
 }
+
+}
+
+/* ===============================
+CTA
+===============================*/
+
+.cta{
+
+background-image:linear-gradient(
+rgba(0,0,0,.6),
+rgba(0,0,0,.6)
+),
+url("/img/contactanos.jpg");
+
+background-size:cover;
+background-position:center;
+
+padding:120px 0;
+
+text-align:center;
+
+}
+
+.cta h2{
+
+font-size:2.5rem;
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+margin-bottom:30px;
+color:#e2e8f0;
+
+}
+
+.btn-principal{
+
+background:#38bdf8;
+
+color:white;
+
+padding:14px 34px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-principal:hover{
+
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(0,0,0,.4);
 
 }
