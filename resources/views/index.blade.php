@@ -35,8 +35,8 @@
 
                     <nav class="navegacion" id="navMenu">
                         <a href="/sobrenosotros">Nosotros</a>
-                        <a href="#">Anuncios</a>
-                        <a href="#">Blog</a>
+                        <a href="/proyectos">Proyectos</a>
+                        <a href="#">Referencias</a>
                         <a href="#">Contacto</a>
                     </nav>
 
@@ -83,6 +83,9 @@
                                 Officiis soluta, exercitationem asperiores sint consequuntur ipsam voluptatem ab id. 
                                 Sed delectus in, maiores minus enim corporis quas quia natus velit esse.
                             </p>
+                            <a href="{{ route('sobrenosotros') }}" class="boton-solicitar">
+                                Solicitar Servicio
+                            </a>
                         </div>
                     </div>
 
@@ -98,6 +101,9 @@
                                 Officiis soluta, exercitationem asperiores sint consequuntur ipsam voluptatem ab id. 
                                 Sed delectus in, maiores minus enim corporis quas quia natus velit esse.
                             </p>
+                            <a href="{{ route('sobrenosotros') }}" class="boton-solicitar">
+                                Solicitar Servicio
+                            </a>
                         </div>
                     </div>
 
@@ -113,6 +119,9 @@
                                 Officiis soluta, exercitationem asperiores sint consequuntur ipsam voluptatem ab id. 
                                 Sed delectus in, maiores minus enim corporis quas quia natus velit esse.
                             </p>
+                            <a href="{{ route('sobrenosotros') }}" class="boton-solicitar">
+                                Solicitar Servicio
+                            </a>
                         </div>
                     </div>
 
@@ -128,6 +137,9 @@
                                 Officiis soluta, exercitationem asperiores sint consequuntur ipsam voluptatem ab id. 
                                 Sed delectus in, maiores minus enim corporis quas quia natus velit esse.
                             </p>
+                            <a href="{{ route('sobrenosotros') }}" class="boton-solicitar">
+                                Solicitar Servicio
+                            </a>
                         </div>
                     </div>
 
@@ -150,48 +162,53 @@
             
                         <h2>¿Por qué elegir ZYPHERIX?</h2>
 
-                        <div class="porque-grid">
-                            <div class="porque-card porque-con-img">
-                                <div class="porque-texto">
-                                    <h4>Respuesta rápida</h4>
-                                    <p>Atendemos incidencias en el menor tiempo posible.</p>
-                                </div>
-                                <div class="porque-img">
-                                    <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
-                                </div>
+                       <div class="porque-grid">
+
+                        <div class="porque-card">
+                            <div class="porque-img">
+                                <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
                             </div>
 
-                            <div class="porque-card porque-con-img">
-                                <div class="porque-texto">
-                                    <h4>Experiencia técnica</h4>
-                                    <p>Especialistas en infraestructura y desarrollo.</p>
-                                </div>
-                                <div class="porque-img">
-                                    <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
-                                </div>
+                            <div class="porque-texto">
+                                <h4><i class="bi bi-lightning-charge"></i> Respuesta rápida</h4>
+                                <p>Atendemos incidencias en el menor tiempo posible.</p>
+                            </div>
+                        </div>
+
+                        <div class="porque-card">
+                            <div class="porque-img">
+                                <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
                             </div>
 
-                            <div class="porque-card porque-con-img">
-                                <div class="porque-texto">
-                                    <h4>Soluciones confiables</h4>
-                                    <p>Implementaciones seguras y escalables.</p>
-                                </div>
-                                <div class="porque-img">
-                                    <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
-                                </div>
-                                
+                            <div class="porque-texto">
+                                <h4>Experiencia técnica</h4>
+                                <p>Especialistas en infraestructura y desarrollo.</p>
+                            </div>
+                        </div>
+
+                        <div class="porque-card">
+                            <div class="porque-img">
+                                <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
                             </div>
 
-                            <div class="porque-card porque-con-img">
-                                <div class="porque-texto">
-                                    <h4>Soluciones confiables</h4>
-                                    <p>Implementaciones seguras y escalables.</p>
-                                </div>
-                                <div class="porque-img">
-                                    <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
-                                </div>
+                            <div class="porque-texto">
+                                <h4>Soluciones confiables</h4>
+                                <p>Implementaciones seguras y escalables.</p>
                             </div>
-                        </div> 
+                        </div>
+
+                        <div class="porque-card">
+                            <div class="porque-img">
+                                <img src="{{ asset('img/coding.jpg') }}" alt="Codigo">
+                            </div>
+
+                            <div class="porque-texto">
+                                <h4>Soporte profesional</h4>
+                                <p>Asistencia técnica confiable para tu negocio.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </section>
 
                 <!-- DERECHA -->

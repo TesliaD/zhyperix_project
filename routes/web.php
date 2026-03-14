@@ -16,3 +16,8 @@ Route::get('/index', function () {
 Route::get('/sobrenosotros', function () {
     return view('sobrenosotros');
 })->name('sobrenosotros');
+
+//Vista Proyectos
+Route::get('/proyectos',function(){
+    return view('proyectos');
+})->name('proyectos');

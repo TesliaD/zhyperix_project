@@ -220,15 +220,23 @@ box-shadow:
 /* FLECHAS */
 
 /*boton-solicitar*/
-.boton-solicitar {
-  display: inline-block;
-  background: #38bdf8;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: .25s;
+.boton-solicitar{
+
+display:block;
+text-align:center;
+margin-top:15px;
+
+background:#38bdf8;
+color:white;
+
+padding:12px;
+border-radius:8px;
+
+text-decoration:none;
+font-weight:600;
+
+transition:.3s;
+
 }
 
 .boton-solicitar:hover {
@@ -337,54 +345,96 @@ box-shadow:
 
 /* ===== PORQUE ZYPHERIX ===== */
 
-.blog {
-  padding: 3rem 0;
-  text-align: center;
-  color: white;
-}
-
-.blog h2{
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-bottom: 2.5rem;
-  letter-spacing: .5px;
-}
-
-
 .porque-grid{
-  display: grid;/*QUITAR DESPUES*/
-  margin-top: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  margin-top:3rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
 }
-/* tarjetas del porque */
+
 .porque-card{
-  margin-top: 1rem;
-  background: linear-gradient(
+
+  background:linear-gradient(
     145deg,
     rgba(255,255,255,0.06),
     rgba(255,255,255,0.02)
   );
-  padding: 1.8rem;
-  border-radius: 18px;
-  backdrop-filter: blur(10px);
-  transition: all .3s ease;
-  border: 1px solid rgba(255,255,255,0.08);
-  position: relative;
-  overflow: hidden;
+
+  border-radius:18px;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(10px);
+
+  transition:all .35s ease;
 }
 
 .porque-card:hover{
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
-  border-color: rgba(56,189,248,.35);
-}
-.porque-grid h4{
-  margin-bottom: .5rem;
-  color: #38bdf8;
+
+  transform:translateY(-8px);
+
+  border-color:rgba(56,189,248,.4);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.35);
+
 }
 
+/* imagen superior */
+
+.porque-img{
+
+  width:100%;
+  height:180px;
+
+  overflow:hidden;
+
+}
+
+.porque-img img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:transform .4s ease;
+
+}
+
+.porque-card:hover img{
+
+  transform:scale(1.08);
+
+}
+
+/* texto */
+
 .porque-texto{
-  text-align: left;
+
+  padding:1.4rem;
+
+  text-align:left;
+
+}
+
+.porque-texto h4{
+
+  color:#38bdf8;
+
+  margin-bottom:.4rem;
+
+  font-size:1.1rem;
+
+}
+
+.porque-texto p{
+
+  color:#cbd5f5;
+
+  font-size:.95rem;
+
 }
 /* ===== BASE (móvil) ===== */
 
